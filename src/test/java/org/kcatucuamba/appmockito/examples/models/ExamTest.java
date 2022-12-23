@@ -4,7 +4,7 @@ import junit.framework.Assert;
 import org.junit.jupiter.api.Test;
 
 
-public class ExamTest {
+class ExamTest {
 
     @Test
     void testExam() {
