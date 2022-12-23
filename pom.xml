@@ -26,6 +26,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.organization>kdcatucuambal</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.language>java</sonar.language>
+        <sonar.java.coveragePlugin>Jacoco</sonar.java.coveragePlugin>
+        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.jacoco.reportsPaths>${project.build.directory}/jacoco-ut.exec</sonar.jacoco.reportsPaths>
+        <sonar.sources>pom.xml,src/main/java</sonar.sources>
+        <sonar.test>pom.xml,src/test/java</sonar.test>
     </properties>
 
     <dependencies>
@@ -63,7 +70,7 @@
             <version>0.8.7</version>
             <executions>
               <execution>
-                <id>prepare-agent-kdc</id>
+                <id>prepare-agent</id>
                 <goals>
                   <goal>prepare-agent</goal>
                 </goals>

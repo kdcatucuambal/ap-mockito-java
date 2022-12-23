@@ -9,7 +9,6 @@ import org.kcatucuamba.appmockito.examples.repositories.QuestionRepository;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.stubbing.Answer;
@@ -18,7 +17,6 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.isNull;
-import static org.mockito.Mockito.mock;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
 
