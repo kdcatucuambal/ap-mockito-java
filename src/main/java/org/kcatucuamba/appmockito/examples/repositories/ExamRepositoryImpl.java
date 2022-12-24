@@ -9,11 +9,13 @@ public class ExamRepositoryImpl implements ExamRepository {
 
     @Override
     public List<Exam> findAll() {
+
         return Arrays.asList(
                 new Exam(5L, "Math"),
                 new Exam(6L, "Physics"),
                 new Exam(7L, "Chemistry")
         );
+
     }
 
     @Override

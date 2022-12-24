@@ -1,11 +1,14 @@
-package org.kcatucuamba.appmockito.examples.services;
+package org.kcatucuamba.appmockito.examples.services.test;
 
+import junit.framework.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.kcatucuamba.appmockito.examples.models.Exam;
 import org.kcatucuamba.appmockito.examples.repositories.ExamRepository;
 import org.kcatucuamba.appmockito.examples.repositories.QuestionRepository;
+import org.kcatucuamba.appmockito.examples.services.Data;
+import org.kcatucuamba.appmockito.examples.services.ExamServiceImpl;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -43,13 +46,20 @@ class ExamServiceImplTest {
 
 
     @Test
-    void findExamByName() {
+    public void findExamByName() {
         //We are telling the mock to return the list of exams when the method findAll is called
         Mockito.when(examRepository.findAll()).thenReturn(Data.EXAMS);
         Exam examFound = service.findExamByName("Math");
         assertNotNull(examFound);
         assertEquals(5L, examFound.getId());
         assertEquals("Math", examFound.getName());
+    }
+
+    @Test
+    void findExamByName_WithEmptyList() {
+        Mockito.when(examRepository.findAll()).thenReturn(Collections.emptyList());
+        Exam examFound = service.findExamByName("Math");
+        Assert.assertNull(examFound);
     }
 
     @Test
