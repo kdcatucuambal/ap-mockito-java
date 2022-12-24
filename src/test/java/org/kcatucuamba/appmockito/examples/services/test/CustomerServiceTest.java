@@ -5,52 +5,52 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.kcatucuamba.appmockito.examples.services.CustomerService;
 
-public class CustomerServiceTest {
+class CustomerServiceTest {
 
     @Test
-    public void testIsPremium(){
+    void testIsPremium(){
         CustomerService.isPremium("1JACK10");
         Assert.assertTrue(true);
     }
 
 
     @Test()
-    public void testIsPremiumFail(){
+    void testIsPremiumFail(){
         Assertions.assertThrows(RuntimeException.class, () -> {
             CustomerService.isPremium("xJACKx");
         });
     }
 
     @Test()
-    public void testIsPremiumFail2(){
+    void testIsPremiumFail2(){
         Assertions.assertThrows(RuntimeException.class, () -> {
             CustomerService.isPremium("xcualqiu");
         });
     }
 
     @Test()
-    public void testIsPremiumFail3(){
+    void testIsPremiumFail3(){
         Assertions.assertThrows(RuntimeException.class, () -> {
             CustomerService.isPremium("1xcualqiu0");
         });
     }
 
     @Test()
-    public void testIsPremiumFail4(){
+    void testIsPremiumFail4(){
         Assertions.assertThrows(RuntimeException.class, () -> {
             CustomerService.isPremium("mJACKO");
         });
     }
 
     @Test()
-    public void testIsPremiumFail5(){
+    void testIsPremiumFail5(){
         Assertions.assertThrows(RuntimeException.class, () -> {
             CustomerService.isPremium("1malo4");
         });
     }
 
     @Test()
-    public void testIsPremiumFail56(){
+    void testIsPremiumFail56(){
         Assertions.assertThrows(RuntimeException.class, () -> {
             CustomerService.isPremium("xamalo0");
         });

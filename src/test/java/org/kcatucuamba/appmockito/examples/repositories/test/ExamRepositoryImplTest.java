@@ -7,9 +7,9 @@ import org.kcatucuamba.appmockito.examples.repositories.ExamRepositoryImpl;
 
 import java.util.List;
 
-public class ExamRepositoryImplTest {
+class ExamRepositoryImplTest {
     @Test
-    public void findAll() {
+    void findAll() {
         ExamRepositoryImpl repository = new ExamRepositoryImpl();
         List<Exam> exams = repository.findAll();
         Assert.assertNotNull(exams);
