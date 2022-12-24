@@ -42,4 +42,18 @@ public class CustomerServiceTest {
         });
     }
 
+    @Test()
+    public void testIsPremiumFail5(){
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            CustomerService.isPremium("1malo4");
+        });
+    }
+
+    @Test()
+    public void testIsPremiumFail56(){
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            CustomerService.isPremium("xamalo0");
+        });
+    }
+
 }
