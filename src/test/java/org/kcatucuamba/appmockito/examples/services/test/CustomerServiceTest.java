@@ -13,10 +13,18 @@ public class CustomerServiceTest {
         Assert.assertTrue(true);
     }
 
+
     @Test()
     public void testIsPremiumFail(){
         Assertions.assertThrows(RuntimeException.class, () -> {
             CustomerService.isPremium("xJACKx");
+        });
+    }
+
+    @Test()
+    public void testIsPremiumFail2(){
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            CustomerService.isPremium("xcualqiu");
         });
     }
 
