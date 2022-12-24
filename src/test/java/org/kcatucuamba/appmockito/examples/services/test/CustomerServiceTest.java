@@ -28,4 +28,18 @@ public class CustomerServiceTest {
         });
     }
 
+    @Test()
+    public void testIsPremiumFail3(){
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            CustomerService.isPremium("1xcualqiu0");
+        });
+    }
+
+    @Test()
+    public void testIsPremiumFail4(){
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            CustomerService.isPremium("mJACKO");
+        });
+    }
+
 }
