@@ -56,4 +56,10 @@ public class CustomerServiceTest {
         });
     }
 
+    @Test()
+    public void testDayMessage(){
+        String day = CustomerService.dayMessage(1);
+        Assert.assertEquals("Monday", day);
+    }
+
 }
